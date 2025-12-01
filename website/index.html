@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Rescue - Seattle's #1 Web Design Agency | Transform Your Website Into a Revenue Machine</title>
+    <meta name="description" content="Is your website costing you $10K+/month in lost revenue? Site Rescue specializes in rescuing outdated websites for local Seattle businesses. Free audit + ROI calculator.">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Site Rescue",
+      "image": "https://siterescue.com/logo.png",
+      "description": "Professional web design and development for local businesses",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Seattle",
+        "addressRegion": "WA"
+      },
+      "telephone": "253-545-1034",
+      "priceRange": "$$"
+    }
+    </script>
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-life-ring"></i>
+                <span>Site Rescue</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#portfolio" class="nav-link">Services</a>
+                <a href="#calculator" class="nav-link">ROI Calculator</a>
+                <a href="#testimonials" class="nav-link">Reviews</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="tel:253-545-1034" class="nav-phone"><i class="fas fa-phone"></i> 253-545-1034</a>
+                <a href="#contact" class="btn-primary btn-nav">Get Free Audit</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Mesh Gradient -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="mesh-gradient"></div>
+            <canvas id="particleCanvas"></canvas>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-badge" data-aos="fade-up">
+                <i class="fas fa-award"></i>
+                <span>Trusted by Seattle Small Businesses</span>
+            </div>
+            
+            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+                Is Your Website Costing You
+                <span class="gradient-text typed-text">$10,000+ Per Month?</span>
+            </h1>
+            
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                78% of customers judge your business by your website. If yours is outdated, slow, or broken—you're losing money every single day.
+            </p>
+            
+            <div class="hero-urgency" data-aos="fade-up" data-aos-delay="250">
+                <i class="fas fa-clock"></i>
+                <span>Limited Availability: Only <strong>3 project slots</strong> available this month</span>
+            </div>
+            
+            <div class="hero-cta" data-aos="fade-up" data-aos-delay="300">
+                <a href="#contact" class="btn-primary btn-large pulse-button">
+                    <span>Get Free Website Audit</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#calculator" class="btn-secondary btn-large">
+                    <i class="fas fa-calculator"></i>
+                    <span>Calculate Your Losses</span>
+                </a>
+            </div>
+            
+            <div class="hero-mini-proof" data-aos="fade-up" data-aos-delay="350">
+                <div class="mini-proof-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Free, no-obligation audit</span>
+                </div>
+                <div class="mini-proof-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Results in 24 hours</span>
+                </div>
+                <div class="mini-proof-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>No credit card required</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+
+    <!-- ROI Calculator Widget -->
+    <section class="calculator-section" id="calculator">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">ROI Calculator</span>
+                <h2>How Much Is Your Bad Website Costing You?</h2>
+                <p>Enter your numbers below to see your potential monthly losses</p>
+            </div>
+            
+            <div class="calculator-widget" data-aos="fade-up" data-aos-delay="100">
+                <div class="calculator-inputs">
+                    <div class="calc-input-group">
+                        <label for="monthlyVisitors">Monthly Website Visitors</label>
+                        <input type="number" id="monthlyVisitors" value="1000" min="100" step="100">
+                        <span class="input-hint">Approximate number</span>
+                    </div>
+                    
+                    <div class="calc-input-group">
+                        <label for="conversionRate">Current Conversion Rate (%)</label>
+                        <input type="number" id="conversionRate" value="2" min="0" max="100" step="0.5">
+                        <span class="input-hint">Leads / Total visitors</span>
+                    </div>
+                    
+                    <div class="calc-input-group">
+                        <label for="avgOrderValue">Average Order Value ($)</label>
+                        <input type="number" id="avgOrderValue" value="500" min="10" step="10">
+                        <span class="input-hint">Average project/sale value</span>
+                    </div>
+                </div>
+                
+                <div class="calculator-results">
+                    <div class="result-box">
+                        <div class="result-label">You're Currently Making</div>
+                        <div class="result-value current" id="currentRevenue">$10,000</div>
+                        <div class="result-sublabel">per month from your website</div>
+                    </div>
+                    
+                    <div class="result-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    
+                    <div class="result-box highlight">
+                        <div class="result-label">With Site Rescue</div>
+                        <div class="result-value potential" id="potentialRevenue">$18,000</div>
+                        <div class="result-sublabel">per month (80% better conversion)</div>
+                    </div>
+                    
+                    <div class="result-summary">
+                        <div class="summary-loss">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>You're losing <strong id="monthlyLoss">$8,000/month</strong> with your current website</span>
+                        </div>
+                        <div class="summary-annual">
+                            That's <strong id="annualLoss">$96,000</strong> per year in lost revenue!
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="calculator-cta">
+                    <p style="text-align: center; color: #64748b; font-size: 14px; margin-bottom: 20px;">
+                        <em>*Based on typical 50-100% conversion improvements. Results vary by industry.</em>
+                    </p>
+                    <a href="#contact" class="btn-primary btn-large">
+                        Stop Losing Money - Get Free Audit
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section class="portfolio-section" id="portfolio">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">What We Do</span>
+                <h2>Modern Websites That Actually Convert</h2>
+                <p>We build fast, mobile-friendly websites designed to get you more customers</p>
+            </div>
+            
+            <div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <!-- Feature 1 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="0" style="background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📱</div>
+                    <h3 style="margin-bottom: 1rem; color: #1a202c;">Mobile-First Design</h3>
+                    <p style="color: #64748b; line-height: 1.6;">80% of your customers browse on their phones. We make sure your site looks perfect on every device.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100" style="background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
+                    <h3 style="margin-bottom: 1rem; color: #1a202c;">Lightning Fast Loading</h3>
+                    <p style="color: #64748b; line-height: 1.6;">Your site will load in under 2 seconds. Every second of delay costs you customers.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200" style="background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🎯</div>
+                    <h3 style="margin-bottom: 1rem; color: #1a202c;">Clear Calls-to-Action</h3>
+                    <p style="color: #64748b; line-height: 1.6;">Big, obvious contact buttons. We make it dead simple for customers to reach you.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300" style="background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🔍</div>
+                    <h3 style="margin-bottom: 1rem; color: #1a202c;">SEO Optimized</h3>
+                    <p style="color: #64748b; line-height: 1.6;">Built to rank on Google. We handle all the technical stuff so customers can actually find you.</p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400" style="background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">✏️</div>
+                    <h3 style="margin-bottom: 1rem; color: #1a202c;">Easy to Update</h3>
+                    <p style="color: #64748b; line-height: 1.6;">Want to change your hours or add a new service? We'll show you how to do it yourself.</p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500" style="background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">💰</div>
+                    <h3 style="margin-bottom: 1rem; color: #1a202c;">Affordable Pricing</h3>
+                    <p style="color: #64748b; line-height: 1.6;">Starting at $1,500 for a complete redesign. ROI-focused pricing that pays for itself in weeks, not months.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Testimonials</span>
+                <h2>What Our Clients Say</h2>
+                <p>Real reviews from real Seattle businesses</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Our website was from 2014 and looked terrible on phones. Site Rescue completely transformed it in 2 weeks. We're now getting twice as many calls and our Google ranking went from page 3 to top 5. Best investment we've made!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="author-info">
+                            <div class="author-name">Michael Rodriguez</div>
+                            <div class="author-title">Owner, Green Valley Landscaping</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"I couldn't believe the quality! The mockups were stunning and the new site is gorgeous. Our quote requests went up 90% in the first 2 months. Best investment I've ever made!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="author-info">
+                            <div class="author-name">Sarah Chen</div>
+                            <div class="author-title">Manager, Summit Roofing</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The free audit alone was worth it—showed me exactly what was wrong. The new website loads in under 2 seconds and looks amazing on every device. Our patient bookings are up over 100% in 6 months."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="author-info">
+                            <div class="author-name">Dr. James Patterson</div>
+                            <div class="author-title">Pacific Dental Care</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section" id="problem">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">The Problem</span>
+                <h2>Why Your Website Is Failing</h2>
+                <p>These critical mistakes are costing you customers every single day</p>
+            </div>
+            
+            <div class="problem-grid">
+                <div class="problem-card glass-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="card-icon">
+                        <i class="fas fa-mobile-screen-button"></i>
+                    </div>
+                    <h3>Not Mobile Optimized</h3>
+                    <div class="stat-highlight">78%</div>
+                    <p>of traffic comes from mobile. If your site doesn't work on phones, you're losing 8 out of 10 potential customers before they even see your services.</p>
+                    <div class="card-tag danger">Critical Issue</div>
+                </div>
+                
+                <div class="problem-card glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-icon">
+                        <i class="fas fa-gauge-high"></i>
+                    </div>
+                    <h3>Loads Too Slow</h3>
+                    <div class="stat-highlight">53%</div>
+                    <p>of visitors leave if your site takes longer than 3 seconds. Every second of delay = lost revenue. Speed isn't optional—it's mandatory.</p>
+                    <div class="card-tag danger">Revenue Killer</div>
+                </div>
+                
+                <div class="problem-card glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Confusing Layout</h3>
+                    <div class="stat-highlight">3x</div>
+                    <p>better conversion with clear CTAs. If visitors can't find your phone number or contact form in 5 seconds, they'll call your competitor instead.</p>
+                    <div class="card-tag danger">Lost Leads</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Pricing</span>
+                <h2>Simple, Transparent Investment</h2>
+                <p>No hidden fees. No surprises. Just results.</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card" data-aos="flip-up" data-aos-delay="0">
+                    <div class="pricing-header">
+                        <h3>Free Audit</h3>
+                        <div class="price-tag">
+                            <span class="currency">$</span>
+                            <span class="amount">0</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 15-minute discovery call</li>
+                        <li><i class="fas fa-check"></i> Screenshot analysis</li>
+                        <li><i class="fas fa-check"></i> Issues checklist</li>
+                        <li><i class="fas fa-check"></i> Improvement roadmap</li>
+                        <li><i class="fas fa-check"></i> Zero obligation</li>
+                    </ul>
+                    <a href="#contact" class="btn-outline">Get Your Audit</a>
+                </div>
+                
+                <div class="pricing-card featured" data-aos="flip-up" data-aos-delay="100">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Full Redesign</h3>
+                        <div class="price-tag">
+                            <span class="currency">$</span>
+                            <span class="amount">1,500</span>
+                        </div>
+                        <div class="price-roi">Pays for itself in weeks</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Complete website redesign</li>
+                        <li><i class="fas fa-check"></i> Mobile-first responsive</li>
+                        <li><i class="fas fa-check"></i> Speed optimization (&lt;2s load)</li>
+                        <li><i class="fas fa-check"></i> SEO foundation</li>
+                        <li><i class="fas fa-check"></i> 2 rounds of revisions</li>
+                        <li><i class="fas fa-check"></i> Launch support & training</li>
+                    </ul>
+                    <a href="#contact" class="btn-primary">Get Started Today</a>
+                </div>
+                
+                <div class="pricing-card" data-aos="flip-up" data-aos-delay="200">
+                    <div class="pricing-header">
+                        <h3>Care Plan</h3>
+                        <div class="price-tag">
+                            <span class="currency">$</span>
+                            <span class="amount">125</span>
+                            <span class="period">/mo</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Hosting & security updates</li>
+                        <li><i class="fas fa-check"></i> Monthly content updates</li>
+                        <li><i class="fas fa-check"></i> Technical support</li>
+                        <li><i class="fas fa-check"></i> SEO maintenance</li>
+                        <li><i class="fas fa-check"></i> Analytics reporting</li>
+                        <li><i class="fas fa-check"></i> Priority response</li>
+                    </ul>
+                    <a href="#contact" class="btn-outline">Learn More</a>
+                </div>
+                
+                <div class="pricing-card" data-aos="flip-up" data-aos-delay="300">
+                    <div class="pricing-header">
+                        <h3>Growth Plan</h3>
+                        <div class="price-tag">
+                            <span class="currency">$</span>
+                            <span class="amount">350</span>
+                            <span class="period">/mo</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Everything in Care Plan</li>
+                        <li><i class="fas fa-check"></i> SEO content & optimization</li>
+                        <li><i class="fas fa-check"></i> Conversion improvements</li>
+                        <li><i class="fas fa-check"></i> Landing page testing</li>
+                        <li><i class="fas fa-check"></i> Quarterly strategy reviews</li>
+                        <li><i class="fas fa-check"></i> Performance analytics</li>
+                    </ul>
+                    <a href="#contact" class="btn-outline">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="pricing-guarantee" data-aos="fade-up">
+                <i class="fas fa-shield-halved"></i>
+                <div>
+                    <h4>30-Day Money-Back Guarantee</h4>
+                    <p>If you're not completely satisfied with your new website within 30 days, we'll refund 100% of your investment. No questions asked. Zero risk.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section (Multi-Step Form) -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Get Started</span>
+                <h2>Get Your Free Website Audit</h2>
+                <p>See exactly what's broken and how we'll fix it—in 24 hours</p>
+            </div>
+            
+            <div class="contact-wrapper">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="info-box">
+                        <h3>What You'll Get:</h3>
+                        <ul class="info-checklist">
+                            <li><i class="fas fa-check-circle"></i> Detailed screenshot analysis</li>
+                            <li><i class="fas fa-check-circle"></i> Mobile responsiveness report</li>
+                            <li><i class="fas fa-check-circle"></i> Speed & performance scores</li>
+                            <li><i class="fas fa-check-circle"></i> SEO audit</li>
+                            <li><i class="fas fa-check-circle"></i> Specific improvement recommendations</li>
+                            <li><i class="fas fa-check-circle"></i> No-obligation consultation</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="contact-details">
+                        <h3>Prefer to Talk?</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <span class="contact-label">Call Us Now</span>
+                                <a href="tel:253-545-1034" class="contact-link-large">253-545-1034</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <span class="contact-label">Email Us</span>
+                                <a href="mailto:siterescue205@gmail.com">siterescue205@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <span class="contact-label">Response Time</span>
+                                <span><strong>Under 1 hour</strong> during business hours</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form glass-card multi-step-form" id="contactForm" data-aos="fade-left">
+                    <div class="form-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <div class="progress-text">
+                            Step <span id="currentStep">1</span> of 3
+                        </div>
+                    </div>
+                    
+                    <!-- Step 1 -->
+                    <div class="form-step active" data-step="1">
+                        <h3>Let's start with your basics</h3>
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="John Smith">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+                        <button type="button" class="btn-primary btn-full next-step">
+                            Continue
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="form-step" data-step="2">
+                        <h3>Tell us about your business</h3>
+                        <div class="form-group">
+                            <label for="business">Business Name</label>
+                            <input type="text" id="business" name="business" placeholder="Your Business Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="website">Current Website URL *</label>
+                            <input type="url" id="website" name="website" required placeholder="https://yoursite.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="253-555-0123">
+                        </div>
+                        <div class="form-buttons">
+                            <button type="button" class="btn-secondary prev-step">
+                                <i class="fas fa-arrow-left"></i>
+                                Back
+                            </button>
+                            <button type="button" class="btn-primary next-step">
+                                Continue
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="form-step" data-step="3">
+                        <h3>What's your biggest concern?</h3>
+                        <div class="form-group">
+                            <label for="concern">Primary Issue *</label>
+                            <select id="concern" name="concern" required>
+                                <option value="">Select your biggest problem</option>
+                                <option value="mobile">Not mobile-friendly</option>
+                                <option value="slow">Site loads too slow</option>
+                                <option value="leads">Not getting enough leads</option>
+                                <option value="outdated">Looks outdated</option>
+                                <option value="seo">Not showing up on Google</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Additional Details (Optional)</label>
+                            <textarea id="message" name="message" rows="3" placeholder="Any specific issues or goals?"></textarea>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="button" class="btn-secondary prev-step">
+                                <i class="fas fa-arrow-left"></i>
+                                Back
+                            </button>
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Get My Free Audit
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <p class="form-disclaimer">
+                        <i class="fas fa-lock"></i>
+                        Your information is secure. We'll never share it with anyone.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-life-ring"></i>
+                        <span>Site Rescue</span>
+                    </div>
+                    <p>Transforming outdated websites into revenue-generating machines for Seattle businesses.</p>
+                    <div class="footer-rating">
+                        <div class="rating-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span>Serving Seattle's Small Business Community</span>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#portfolio">Services</a>
+                    <a href="#calculator">ROI Calculator</a>
+                    <a href="#testimonials">Reviews</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Get In Touch</h4>
+                    <p><i class="fas fa-phone"></i> 253-545-1034</p>
+                    <p><i class="fas fa-envelope"></i> siterescue205@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Seattle, Washington</p>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Site Rescue. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating CTA Button -->
+    <a href="tel:253-545-1034" class="floating-cta" id="floatingCta">
+        <i class="fas fa-phone"></i>
+        <span>Call Now</span>
+    </a>
+
+    <!-- Exit Intent Popup -->
+    <div class="exit-popup" id="exitPopup">
+        <div class="exit-popup-content">
+            <button class="exit-popup-close" id="exitPopupClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="exit-popup-icon">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <h3>Wait! Don't Leave Money on the Table</h3>
+            <p>Get your <strong>FREE website audit</strong> before you go. See exactly what's costing you customers—no obligation.</p>
+            <div class="exit-popup-bonus">
+                <i class="fas fa-gift"></i>
+                <span><strong>Bonus:</strong> First 10 people get a free SEO report ($297 value)</span>
+            </div>
+            <a href="#contact" class="btn-primary btn-large exit-popup-cta">
+                Claim My Free Audit
+                <i class="fas fa-arrow-right"></i>
+            </a>
+            <p class="exit-popup-disclaimer">Takes 2 minutes • Results in 24 hours</p>
+        </div>
+        <div class="exit-popup-overlay" id="exitPopupOverlay"></div>
+    </div>
+
+    <!-- AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+</html>

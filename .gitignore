@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Project-specific
+scans/
+*.csv
+*.jpg
+*.jpeg
+*.png
+
+# Environment
+.env
+.env.local
+
+# Sensitive files - DO NOT COMMIT
+credentials.json
+token.json
+geminiapikey.txt.txt
+geminiapikey.txt
+*.json.txt
+sent_emails_today.txt
+GITHUB_TOKEN.txt
+
+# Bot files containing API keys
+agency_bot.py
+
+# Scripts containing tokens or secrets
+deploy_with_token.bat
+COMPLETE_SETUP.bat
+remove_secrets.bat
+remove_api_from_github.bat
+cleanup_github.bat
+push_clean.bat
+
+# OS
+.DS_Store
+Thumbs.db
+
